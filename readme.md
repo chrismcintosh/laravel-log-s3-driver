@@ -41,13 +41,6 @@ Once configured you can make this driver your default logging channel in your .e
 Or you can use the channel as needed
 `\Log::channel('s3Logger')->info("Test Log");`
 
-## License
-
-The Laravel S3 Logging Driver is open-sourced software licensed under the MIT license.
-
-## Contributing
-
-Please see CONTRIBUTING for details.
 
 ## Security
 
