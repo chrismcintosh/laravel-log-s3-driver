@@ -1,0 +1,21 @@
+{
+    "name": "chrismcintosh/laravel-log-s3-driver",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Chrismcintosh\\LaravelLogS3Driver\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Chris Mcintosh",
+            "email": "chris@mcintosh.io"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^10.0",
+        "monolog/monolog": "^3.0",
+        "nesbot/carbon": "^2.67"
+    }
+}
