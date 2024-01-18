@@ -22,12 +22,14 @@ class Handler extends AbstractProcessingHandler
     protected $dateFormat = 'Y-m-d H:i:s';
     private $disk;
     private $style;
+    private $log_directory;
 
-    public function __construct($level = Logger::DEBUG, bool $bubble = true, string $disk = '', string $style = '')
+    public function __construct($level = Logger::DEBUG, bool $bubble = true, string $disk = 's3', string $style = 'single', string $log_directory = 'logs')
     {
         parent::__construct($level, $bubble);
         $this->disk = $disk;
         $this->style = $style;
+        $this->log_directory = $log_directory;
     }
 
     /**
@@ -64,6 +66,6 @@ class Handler extends AbstractProcessingHandler
 
     public function getLogPath($filename): string
     {
-        return "logs/{$filename}";
+        return "{$this->log_directory}/{$filename}";
     }
 }

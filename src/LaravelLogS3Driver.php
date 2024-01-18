@@ -19,8 +19,9 @@ class LaravelLogS3Driver
         $handler = new Handler(
             $level = Logger::DEBUG,
             $bubble = true,
-            $disk = $config['disk'],
-            $style = $config['mirror_style']
+            $disk = isset($config['disk']) ? $config['disk'] : 's3',
+            $style = isset($config['style']) ? $config['style'] : 'single',
+            $log_directory = isset($config['log_directory']) ? $config['log_directory'] : 'logs'
         );
         $processor = new Processor();
         $logger->pushHandler($handler);
