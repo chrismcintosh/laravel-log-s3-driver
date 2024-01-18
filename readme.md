@@ -20,7 +20,7 @@ Minimum Configuration
     ],
 ```
 
-Sample Configuration with Options
+Or Sample Configuration with Options
 
 ```
     's3Logger' => [
