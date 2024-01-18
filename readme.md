@@ -5,20 +5,7 @@ This package provides a logging driver for Laravel applications that allows logs
 ## Installation
 
 You can install the package via composer:
-
-First, add the following to your composer.json file
-
-```
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/chrismcintosh/laravel-log-s3-driver"
-        }
-    ],
-```
-
-Then you can run
-`composer require chrismcintosh/laravel-log-s3-driver "dev-main"`
+`composer require chrismcintosh/laravel-log-s3-driver`
 
 ## Configuration
 
