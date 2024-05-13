@@ -67,8 +67,3 @@ Or you can use the channel as needed
 ## Security
 
 If you discover any security related issues, please email instead of using the issue tracker.
-
-## Credit
-
-All Contributors
-Chris Mcintosh
