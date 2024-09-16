@@ -7,7 +7,7 @@ use Monolog\LogRecord;
 class Processor
 {
 
-    public function __invoke(array $record): array
+    public function __invoke(array|LogRecord $record): array|LogRecord
     {
         return $record;
     }
