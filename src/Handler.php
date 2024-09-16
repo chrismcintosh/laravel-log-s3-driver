@@ -35,13 +35,14 @@ class Handler extends AbstractProcessingHandler
     /**
      * @inheritDoc
      */
-    protected function write(array $record): void
+    protected function write(array|LogRecord $record): void
     {
-        $filename = $this->generateFileName($record['datetime']);
+        $filename = is_array($record) ? $this->generateFileName($record['datetime']) : $this->generateFileName($record->datetime);
         $filepath = $this->getLogPath($filename);
-
-        if (!Storage::disk($this->disk)->append($filepath, $record['formatted'])) {
-            Log::stack(['single'])->info('Tried to log the following message to S3' . PHP_EOL . $record->formatted);
+        $recordFormatted = is_array($record) ? $record['formatted'] : $record->formatted;
+        
+        if (!Storage::disk($this->disk)->append($filepath, recordFormatted)) {
+            Log::stack(['single'])->info('Tried to log the following message to S3' . PHP_EOL . $recordFormatted);
         }
     }
 
