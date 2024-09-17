@@ -41,7 +41,7 @@ class Handler extends AbstractProcessingHandler
         $filepath = $this->getLogPath($filename);
         $recordFormatted = is_array($record) ? $record['formatted'] : $record->formatted;
         
-        if (!Storage::disk($this->disk)->append($filepath, recordFormatted)) {
+        if (!Storage::disk($this->disk)->append($filepath, $recordFormatted)) {
             Log::stack(['single'])->info('Tried to log the following message to S3' . PHP_EOL . $recordFormatted);
         }
     }
