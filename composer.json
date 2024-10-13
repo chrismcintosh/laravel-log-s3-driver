@@ -1,5 +1,5 @@
 {
-  "name": "chrismcintosh/laravel-log-s3-driver",
+  "name": "jrbecart/laravel-log-s3-driver-l9",
   "description": "A Laravel log driver for S3",
   "type": "library",
   "license": "MIT",
@@ -16,8 +16,8 @@
   ],
   "require": {
     "php": "^8.0",
-    "laravel/framework": "^10.0|^11.0",
-    "monolog/monolog": "^3.0",
+    "laravel/framework": "^9.0|^10.0|^11.0",
+    "monolog/monolog": "^2.0|^3.0",
     "nesbot/carbon": "^2.67",
     "league/flysystem-aws-s3-v3": "^3.0"
   }
