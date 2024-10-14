@@ -1,5 +1,5 @@
 {
-  "name": "jrbecart/laravel-log-s3-driver-l9",
+  "name": "chrismcintosh/laravel-log-s3-driver",
   "description": "A Laravel log driver for S3",
   "type": "library",
   "license": "MIT",
